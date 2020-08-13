@@ -1,0 +1,7 @@
+	.globl test
+test:
+	LDUR X10, [X0, #0] 			// X10
+	LDR X14, =0xFFFFFFFFFFFFFFFF
+	EOR X10, X10, X14 // 101010 XOR 111111 = 01010101
+	STUR X10, [X0, #0]
+	BR X30
