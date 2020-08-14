@@ -27,7 +27,11 @@ J1_A:
 J2_B:
 	LDR X13, =66
 	ADD X5, XZR, X13			// Jogador 2 = B
-	B Exit
+Exit:
+	MOV X30, X21
+	MOV X0, X5
+	BR X30
+
 
 	// ---- Function ----
 	Pontuacao:
@@ -130,10 +134,3 @@ Cont10:
 End:
 	BR X30
 	// ---- Function ----
-
-
-Exit:
-	ADD X30, X21, XZR
-	ADD X0, X5, XZR
-
-	BR X30
